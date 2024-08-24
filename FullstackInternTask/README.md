@@ -1,13 +1,13 @@
 
 <br/>
 
-With [The Weather Forecasting](https://fullstackinterntask-weatherforecating.netlify.app) user can search locations by city name and observe the weather for the next 5-6 days and 3 hour interval.
+With The Weather Forecasting user can search locations by city name and observe the weather for the next 5-6 days and 3 hour interval.
 <br />
 The app is developed using React.js,HTM,JS and material-UI.
 
 <br/>
 
-##  Live Demo:
+##  Deployment :
 
 https://fullstackinterntask-weatherforecating.netlify.app
 
@@ -15,7 +15,7 @@ https://fullstackinterntask-weatherforecating.netlify.app
 
 <br/>
 
-## ⚡ How to run Project
+###  How to run Project
 
 1-come in FullstackInternTask Folder
 </br>
@@ -40,7 +40,7 @@ npm start
 - `JS`
 - `material-ui`
 
-Check `packages.json` for details
+
 
 <br/>
 
