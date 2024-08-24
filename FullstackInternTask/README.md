@@ -20,12 +20,13 @@ https://fullstackinterntask-weatherforecating.netlify.app
 ## ⚡ How to run Project
 
 1-come in FullstackInternTask Folder
+</br>
 2-Then start the npm command
 
 
 
 ```bash
-cd FullstackInternTas
+cd FullstackInternTask
 npm start
 
 ```
