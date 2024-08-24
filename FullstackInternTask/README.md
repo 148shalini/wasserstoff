@@ -9,7 +9,7 @@ The app is developed using React.js,HTM,JS and material-UI.
 
 ##  Deployment :
 
-https://fullstackinterntask-weatherforecating.netlify.app
+https://wasserstoff-weatherforecasting.netlify.app/
 
 <br/>
 
