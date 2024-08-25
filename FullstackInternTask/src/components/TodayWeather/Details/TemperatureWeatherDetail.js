@@ -1,7 +1,19 @@
-import { Box, Typography } from '@mui/material';
-import React from 'react';
+import { Box, Typography, Switch } from '@mui/material';
+import React, { useState } from 'react';
 
 const TemperatureWeatherDetail = (props) => {
+  const [isCelsius, setIsCelsius] = useState(true);
+
+  const convertToFahrenheit = (celsius) => {
+    return (celsius * 9/5) + 32;
+  };
+
+  const temperature = isCelsius 
+    ? Math.round(props.temperature) 
+    : Math.round(convertToFahrenheit(props.temperature));
+
+  const unit = isCelsius ? '°C' : '°F';
+
   return (
     <Box
       sx={{
@@ -13,21 +25,29 @@ const TemperatureWeatherDetail = (props) => {
         height: '100%',
       }}
     >
-      <Typography
-        variant="h3"
-        component="h3"
-        sx={{
-          fontWeight: '600',
-          fontSize: { xs: '12px', sm: '14px', md: '16px' },
-          color: 'white',
-          textTransform: 'uppercase',
-          lineHeight: 1,
-          marginBottom: '8px',
-          fontFamily: 'Poppins',
-        }}
-      >
-        {Math.round(props.temperature)} °C
-      </Typography>
+      <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
+        <Typography
+          variant="h3"
+          component="h3"
+          sx={{
+            fontWeight: '600',
+            fontSize: { xs: '12px', sm: '14px', md: '16px' },
+            color: 'white',
+            textTransform: 'uppercase',
+            lineHeight: 1,
+            fontFamily: 'Poppins',
+            marginRight: '8px',
+          }}
+        >
+          {temperature} {unit}
+        </Typography>
+        <Switch
+          size="small"
+          checked={isCelsius}
+          onChange={() => setIsCelsius(!isCelsius)}
+          color="default"
+        />
+      </Box>
       <Typography
         variant="h4"
         component="h4"

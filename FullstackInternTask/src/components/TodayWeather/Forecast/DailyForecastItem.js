@@ -66,7 +66,7 @@ const DailyForecastItem = (props) => {
           fontFamily: 'Poppins',
         }}
       >
-        {props.item.temperature}
+        {props.item.temperature}°{props.unit}
       </Typography>
     </Box>
   );

@@ -82,6 +82,7 @@ const AirConditionsItem = (props) => {
             fontSize: { xs: '12px', sm: '14px', md: '16px' },
             color: 'white',
             lineHeight: 1,
+            textAlign: 'center',
           }}
         >
           {props.value}

@@ -7,6 +7,11 @@ const TodayWeatherAirConditions = ({ data }) => {
   const noDataProvided =
     !data || Object.keys(data).length === 0 || data.cod === '404';
 
+  const getWindDirection = (degree) => {
+    const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+    return directions[Math.round(degree / 45) % 8];
+  };
+
   let content = <ErrorBox flex="1" type="error" />;
 
   if (!noDataProvided)
@@ -19,7 +24,7 @@ const TodayWeatherAirConditions = ({ data }) => {
         />
         <AirConditionsItem
           title="Wind"
-          value={`${data.wind.speed} m/s`}
+          value={`${data.wind.speed} m/s ${getWindDirection(data.wind.deg)}`}
           type="wind"
         />
         <AirConditionsItem
@@ -34,6 +39,7 @@ const TodayWeatherAirConditions = ({ data }) => {
         />
       </>
     );
+
   return (
     <Layout
       title="AIR CONDITIONS"
